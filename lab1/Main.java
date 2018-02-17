@@ -1,33 +1,41 @@
-import java.util.Scanner;
-public class Main{
-	public static double getMed(double[] n){
-		double med = 0;
-		for(int i = 0; i<n.length; i++)
-			med += n[i];
-		return med/n.length;
+package bullshit;
+
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String path = "/home/kenji/eclipse-workspace/bullshit/bullshit/test";
+		String npath = "/home/kenji/eclipse-workspace/bullshit/bullshit/";
+		/*
+		ArrayList<Calculator> retea = new ArrayList<Calculator>();
+		retea.add(new Calculator());
+		retea.add(new Calculator("Dan Baltag".toCharArray()));
+		byte b = 2;
+		retea.add(new Calculator(b));
+		System.out.println();
+		for(Calculator i:retea)
+			i.printCalc();
+		System.out.println();
+		retea.get(0).compare(retea.get(1));
+		System.out.println();
+		Calculator.compareMasa(retea.get(1), retea.get(2));
+		System.out.println();
+		double max = retea.get(0).getPretTot();
+		int p = 0;
+		for (int i = 1; i < retea.size();i++)
+			if(retea.get(i).getPretTot() > max) {
+				max = retea.get(i).getPretTot();
+				p = i;
+			}
+		System.out.println();
+		String name = "";
+		for(char c:retea.get(p).getProp())
+			name += c;
+		System.out.println(name + " detine cel mai costisitor calculator");
+		System.out.println("S-au asamblat " + Calculator.getNrCalc() + " calculatoare");
+		*/
+		System.out.println(path.lastIndexOf("/"));
 	}
 
-	public static void main(String args[]){
-		Scanner input = new Scanner(System.in);
-		System.out.println("how many students do you have?");
-		int s = input.nextInt();
-		Bullshit[] shit;
-		if(s > 0){
-			shit = new Bullshit[s];
-			for (int i = 0; i < shit.length; i++)
-				shit[i] = new Bullshit();
-		}
-		else {
-			shit = new Bullshit[1];
-			shit[0] = new Bullshit();
-		}
-		System.out.println("Student & AvrGrade:");
-			double medg = 0;
-		for(int i = 0; i < shit.length; i++){
-			System.out.println(shit[i].get_name() + " & " + getMed(shit[i].get_grades()));
-			medg += getMed(shit[i].get_grades());
-		}
-		medg /= shit.length;
-		System.out.println("GenAvg = " + medg);
-	}
 }
