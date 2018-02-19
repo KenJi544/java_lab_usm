@@ -127,6 +127,15 @@ public class Calculator {
 		nrCalc++;
 	}
 	
+	Calculator(Calculator ob){
+		this.setProp(ob.getProp().toString());
+		this.setProducator(ob.getProducator());
+		this.setAn(getAn());
+		this.setMasa(getMasa());
+		this.setNrDet(getNrDet());
+		this.setPret(getPret());
+	}
+	
 	private String getNPath() {
 		String n = "";
 		char[] ar = path.toCharArray();

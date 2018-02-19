@@ -5,9 +5,6 @@ import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
-		String path = "/home/kenji/eclipse-workspace/bullshit/bullshit/test";
-		String npath = "/home/kenji/eclipse-workspace/bullshit/bullshit/";
-		/*
 		ArrayList<Calculator> retea = new ArrayList<Calculator>();
 		retea.add(new Calculator());
 		retea.add(new Calculator("Dan Baltag".toCharArray()));
@@ -34,8 +31,6 @@ public class Main {
 			name += c;
 		System.out.println(name + " detine cel mai costisitor calculator");
 		System.out.println("S-au asamblat " + Calculator.getNrCalc() + " calculatoare");
-		*/
-		System.out.println(path.lastIndexOf("/"));
 	}
 
 }
