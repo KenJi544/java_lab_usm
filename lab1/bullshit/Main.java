@@ -1,8 +1,7 @@
 package bullshit;
-
 import java.util.*;
 
-public class Main {
+public class Main{
 
 	public static void main(String[] args) {
 		ArrayList<Calculator> retea = new ArrayList<Calculator>();
@@ -32,5 +31,4 @@ public class Main {
 		System.out.println(name + " detine cel mai costisitor calculator");
 		System.out.println("S-au asamblat " + Calculator.getNrCalc() + " calculatoare");
 	}
-
 }

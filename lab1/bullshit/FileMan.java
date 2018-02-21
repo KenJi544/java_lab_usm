@@ -1,5 +1,4 @@
 package bullshit;
-
 import java.util.*;
 import java.io.*;
 

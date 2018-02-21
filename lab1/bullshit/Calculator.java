@@ -1,5 +1,4 @@
 package bullshit;
-
 import java.util.*;
 
 public class Calculator {
@@ -153,7 +152,55 @@ public class Calculator {
 	}
 	
 	public void setNrDet(byte x) {
+		if(x < 0){
+			System.err.println("bad input, you have another chance");
+		      	nrDet = inp.nextByte();
+			this.setNrDet(nrDet);
+		}
 		nrDet = x;
+		if(x > masa.size()){
+			int dim = x - masa.size();	
+			while(dim-- > 0){
+				System.out.print("masa compononet>");
+				masa.add(inp.nextFloat());
+			}
+		}
+		if (x < masa.size()){
+			int dim = masa.size() - x;
+			ArrayList<Float> aux = new ArrayList<Float>();
+			for(int i = 0; i < dim; i++)
+				aux.add(masa.get(i);
+			this.setMasa(aux);
+		}
+
+		if(x > an.size()){
+			int dim = x - an.size();	
+			while(dim-- > 0){
+				System.out.print("an compononet>");
+				an.add(inp.nextShort());
+			}
+		}
+		if (x < an.size()){
+			int dim =an.size() - x;
+			ArrayList<Short> aux = new ArrayList<Short>();
+			for(int i = 0; i < dim; i++)
+				aux.add(an.get(i);
+			this.setAn(aux);
+		}
+		if(x > pret.size()){
+			int dim = x - an.size();	
+			while(dim-- > 0){
+				System.out.print("pret compononet>");
+				pret.add(inp.nextDouble());
+			}
+		}
+		if (x < pret.size()){
+			int dim = pret.size() - x;
+			ArrayList<Double> aux = new ArrayList<Double>();
+			for(int i = 0; i < dim; i++)
+				aux.add(pret.get(i);
+			this.setPret(aux);
+		}
 	}
 	
 	public byte getNrDet() {
